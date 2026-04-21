@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# ☕ Amber Brew Café
 
-First, run the development server:
+**A warm, modern café landing page built with Next.js 15 & Tailwind CSS**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-amber?style=for-the-badge)](LICENSE)
+
+</div>
+
+---
+
+## ✨ Preview
+
+> A fully responsive café landing page featuring vibrant drink photography, an interactive reservation system, and a warm amber color palette designed to evoke comfort and quality.
+
+---
+
+## 🗂️ Sections
+
+| Section | Description |
+|---|---|
+| 🧭 **Navbar** | Sticky with scroll-aware background & mobile hamburger menu |
+| 🌄 **Hero** | Full-viewport coffee photography with headline, CTA & stat counters |
+| 💡 **Features** | 6 cards highlighting sourcing, roasting, baristas & sustainability |
+| 🍵 **Menu Preview** | Drink photo grid with badges, categories & pricing |
+| 👨‍🍳 **Chef Story** | Barista origin story with milestone timeline |
+| 💬 **Testimonials** | 6 customer reviews with star ratings |
+| 💰 **Pricing** | 3-tier menu & experience pricing with highlighted popular card |
+| 📅 **Reservation** | Full booking form with validation and success state |
+| 📍 **Location** | OpenStreetMap embed + opening hours + contact info |
+| 🦶 **Footer** | Link columns, newsletter signup & legal bar |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework** — [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling** — [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language** — [TypeScript 5](https://www.typescriptlang.org/)
+- **Images** — [Unsplash](https://unsplash.com/) via `next/image`
+- **Map** — [OpenStreetMap](https://www.openstreetmap.org/) (no API key required)
+- **Font** — [Geist](https://vercel.com/font) via `next/font`
+
+---
+
+## 📁 Project Structure
+
+```
+cafe-landing/
+├── app/
+│   ├── globals.css          # Global styles & custom scrollbar
+│   ├── layout.tsx           # Root layout & metadata
+│   └── page.tsx             # Page composition
+│
+├── components/
+│   ├── Navbar.tsx           # Sticky nav with mobile support
+│   ├── HeroSection.tsx      # Full-viewport hero
+│   ├── FeaturesSection.tsx  # Why-us feature cards
+│   ├── MenuPreview.tsx      # Drink photo grid
+│   ├── ChefStory.tsx        # Barista story & timeline
+│   ├── TestimonialSection.tsx # Customer reviews
+│   ├── PricingSection.tsx   # Pricing tiers
+│   ├── ReservationSection.tsx # Booking form (client)
+│   ├── LocationSection.tsx  # Map & hours
+│   ├── NewsletterForm.tsx   # Newsletter input (client)
+│   └── Footer.tsx           # Site footer
+│
+├── next.config.ts           # Image remote patterns
+└── tailwind.config.ts       # (via @theme inline)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js `18+`
+- npm / yarn / pnpm
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Clone the repository
+git clone https://github.com/phurimart14/CafeLandingpage.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Navigate to the project
+cd CafeLandingpage
 
-## Deploy on Vercel
+# Install dependencies
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Start the development server
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🎨 Color Palette
+
+| Role | Color | Hex |
+|---|---|---|
+| Primary | Amber 500 | `#f59e0b` |
+| Accent | Amber 700 | `#b45309` |
+| Background | Amber 50 | `#fffbeb` |
+| Dark sections | Stone 900 | `#1c1917` |
+| Text | Stone 800 | `#292524` |
+
+---
+
+## 📐 Design Principles
+
+- **Semantic HTML** — `<header>`, `<main>`, `<section>`, `<nav>`, `<footer>`, `<article>`, `<blockquote>`
+- **Responsive** — Mobile-first layout, tested at all breakpoints
+- **Performance** — Server Components by default; `"use client"` only where interactivity is needed
+- **Accessibility** — ARIA labels, semantic roles, keyboard-navigable
+
+---
+
+## 📦 Deploy
+
+The easiest way to deploy is via [Vercel](https://vercel.com):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/phurimart14/CafeLandingpage)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+Made with ☕ & ❤️ by **phurimart14**
+
+</div>
